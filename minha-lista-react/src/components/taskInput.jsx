@@ -1,13 +1,24 @@
 import { useState } from 'react';
 
-function InputAdicionar (props){
-    return(
-        <section className="input">
-            <input type="text" placeholder="Digite uma tarefa" value={props.value} onChange={props.onChange}/>
+function TaskInput({ value, onChange, onAdd }) {
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      onAdd();
+    }
+  };
 
-
-        </section>
-    )
+  return (
+    <section className="input-section">
+      <input 
+        type="text" 
+        placeholder="Digite uma tarefa" 
+        value={value} 
+        onChange={onChange}
+        onKeyPress={handleKeyPress}
+      />
+      <button onClick={onAdd}>Adicionar</button>
+    </section>
+  )
 }
 
-export default InputAdicionar;
+export default TaskInput;

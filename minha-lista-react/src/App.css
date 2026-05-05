@@ -1,0 +1,135 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #45a049;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filtros button.ativo {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.lista-tarefas {
+  list-style: none;
+  padding: 0;
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.tarefa-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.tarefa-item span {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.tarefa-item.concluida span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.tarefa-item button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tarefa-item button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .input-section input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .input-section button {
+    border-radius: 4px;
+  }
+
+  .filtros {
+    flex-wrap: wrap;
+  }
+
+  .filtros button {
+    margin: 5px;
+  }
+}
