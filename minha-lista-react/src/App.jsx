@@ -1,28 +1,14 @@
-import { useEffect, useState } from 'react';
-import './App.css';
+﻿import './App.css';
+import Dados from './components/dados';
 
-function ContadorTempo() {
-  const [segundos, setSegundos] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setSegundos((prev) => prev + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  useEffect(() => {
-    document.title = `Passaram-se ${segundos} segundos`;
-  }, [segundos]);
-
+function App() {
   return (
     <div className="app">
-      <h1>Passaram-se {segundos} segundos</h1>
+      <h1>Custom Task LTDA</h1>
+      <p>Exibição de produtos organizados em cards com persistência no navegador.</p>
+      <Dados />
     </div>
   );
 }
 
-export default ContadorTempo;
+export default App;

@@ -133,3 +133,105 @@ p {
     margin: 5px;
   }
 }
+
+.dados-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dados-section h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.dados-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.dados-form input,
+.dados-form button {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.dados-form button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dados-form button:hover {
+  background-color: #005fa3;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.card-meta {
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.card-price {
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card-delete {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card-delete:hover {
+  background-color: #b62828;
+}
+
+@media (max-width: 600px) {
+  .dados-form {
+    grid-template-columns: 1fr;
+  }
+}
